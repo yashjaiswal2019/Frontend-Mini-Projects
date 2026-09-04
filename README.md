@@ -1,4 +1,4 @@
-# Frontend Projects 🔥
+# Frontend Mini Projects 🔥
 
 In this Repository, I will be uploading all the frontend projects that I created to expand my knowledge of HTML, CSS and JavaScript.
 
