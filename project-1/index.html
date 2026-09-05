@@ -4,11 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <meta name="Author" content="Yash Jayasaval">
+    <meta name="description" content="Staff Profile Cards of a small Company">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="profile.png">
+    <title>Staff Profiles</title>
 </head>
 
 <body>
-    <h1>Project 1</h1>
+    <header>
+        <h1 class="head">Staff's Profile</h1>
+        <nav>
+            <a href="#profile1">Christine</a>
+            <a href="#profile2">Mathew</a>
+            <a href="#profile3">James</a>
+            <a href="#profile4">Caroline</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="profile1" class="card">
+                <figure>
+                    <img src="img/female-techlead.jpg" alt="Tech Lead" width="640" height="640" title="Christine">
+                    <figcaption>Christine</figcaption>
+                    <p>Tech Lead</p>
+                </figure>
+            </section>
+
+            <section id="profile2" class="card">
+                <figure>
+                    <img src="img/male1.jpg" alt="Mathew" width="640" height="640" title="Mathew">
+                    <figcaption>Mathew</figcaption>
+                    <div class="name">
+                    <p class="nowrap">Dev-Ops Manager</p>
+                </figure>
+            </section>
+
+            <section id="profile3" class="card">
+                <figure>
+                    <img src="img/male2.jpg" alt="Tech Lead" width="640" height="640" title="James">
+                    <figcaption>James</figcaption>
+                    <p class="nowrap">Senior Engineer</p>
+                </figure>
+            </section>
+
+            <section id="profile4" class="card">
+                <figure>
+                    <img src="img/female-techlead.jpg" alt="Manager" width="640" height="640" title="Caroline">
+                    <figcaption>Caroline</figcaption>
+                    <p class="nowrap">Developer Relations</p>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Want to join Us?</h3>
+        <a href="join.html">Apply here</a>
+    </footer>
 </body>
 
 </html>

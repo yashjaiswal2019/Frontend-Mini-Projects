@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Variables */
+:root {
+    /* General */
+    --HEADER-BG-COLOR: #232020;
+    --HEAD-BG-COLOR: #eef0f2;
+    --NAV-BG-COLOR: #eef0f2;
+    --LIGHT-COLOR: #eef0f2;
+    --DARK-COLOR: #232020;
+    --FOOTER-BG-COLOR: #232020;
+
+    /* Card */
+    --CARD-BORDER-COLOR: #635d5c;
+    --CARD-BG-COLOR: #dce0d9;
+    --CARD-CAPTION-BG-COLOR: #6b0f1a;
+}
+
+/* Utility classes */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Gneral Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3rem;
+    min-height: 100vh;
+}
+
+header {
+    padding: 0.6rem;
+    background-color: var(--HEADER-BG-COLOR);
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    /* padding: 0.5rem 0rem 0.5rem 0rem; */
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: var(--HEAD-BG-COLOR);
+    text-align: center;
+    text-decoration: underline;
+}
+
+header nav {
+    margin-top: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    min-width: 100%;
+    background-color: var(--NAV-BG-COLOR);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: 1px solid var(--DARK-COLOR);
+    color: var(--DARK-COLOR);
+    
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--DARK-COLOR);
+    color: var(--LIGHT-COLOR);
+}
+
+/* Profile Card Rules */
+.container {
+    margin: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .card {
+    scroll-margin-top: 10rem;
+    border: 3px solid var(--CARD-BORDER-COLOR);
+    border-radius: 1.5rem;
+    display: grid;
+    background-color: var(--CARD-BG-COLOR);
+}
+
+.card figure {
+    margin: 0.75rem;
+}
+
+
+.card img {
+    /* padding: 1rem; */
+    border-radius: 50%;
+    border: 2px solid var(--DARK-COLOR);
+}
+
+.card figcaption , .card p {
+    margin-top: min(0.6rem, 4vh);
+    padding: 0.25rem 0;
+    border:1.5px solid var(--DARK-COLOR);
+    border-radius: 1rem;
+    text-align: center;
+    background-color: var(--CARD-CAPTION-BG-COLOR);
+    color: var(--LIGHT-COLOR);
+}
+
+.card p::before {
+    content: 'Role: ';
+}
+
+footer {
+    background-color: var(--FOOTER-BG-COLOR);
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: min(2rem , 5%);
+}
+
+footer h3 {
+    color: var(--LIGHT-COLOR);
+}
+
+footer a {
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--LIGHT-COLOR);
+    color: #232020;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    text-decoration: underline;
+}
+
+/* Have to optimise for large devices now for small screens is done */
+/* @media screen and () */
