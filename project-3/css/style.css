@@ -32,6 +32,10 @@ off-screen {
 }
 
 /* || GENERAL STYLING */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: var(--FF);
