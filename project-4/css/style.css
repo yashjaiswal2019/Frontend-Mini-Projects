@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    scroll-margin-top: 2rem;
 }
 
 img {
@@ -47,14 +49,13 @@ html {
 body {
     font-family: var(--FF-MAIN);
     background-color: #100e0f;
-    color: #fff; /* we have to add variables */
+    color: #fff;
 
 }
 
 .header {
     display: flex;
     flex-flow: row nowrap;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: var(--HEADER-BGCOLOR);
 }
@@ -110,7 +111,6 @@ body {
 
 .hero__bottom {
     position: absolute;
-    /* bottom: 100px; */
     bottom: 13.34vh;
 }
 
@@ -306,7 +306,7 @@ footer {
     }
 }
 
-
+/* || Laptop Screens */
 @media screen and (min-width: 1024px) {
     .slide {
         flex-flow: row nowrap;
