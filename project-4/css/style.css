@@ -63,8 +63,9 @@ body {
 .logo {
     width: 100px;
     margin: 0.5rem 0 0.5rem 0.5rem;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     border-radius: 1rem;
+    box-shadow: 0 0 5px 0.75px hsla(0, 0%, 96%, 0.596);
 }
 
 .header__nav {
@@ -80,7 +81,7 @@ body {
     color: #fff;
 }
 
-.header__nav a:hover {
+.header__nav a:hover , .header__nav a:focus {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
@@ -211,6 +212,8 @@ body {
     position: relative;
 
     padding-top: 5rem;
+
+    box-shadow: 0 0 10px 1px hsla(43, 74%, 49%, 0.721);
 }
 
 .card__img {
@@ -280,10 +283,12 @@ footer {
     color: goldenrod;
 }
 
+/* Copyright */
 .copyright {
     margin: 1rem;
     font-family: var(--FF-PARAGRAPH);
     text-align: center;
+    font-weight: bold;
 }
 
 /* || Media Queries for responsive design */
@@ -325,5 +330,9 @@ footer {
     .slide--2 img {
         max-width: 550px;
         order: 1;
+    }
+
+    .card {
+        width: 350px;
     }
 }
