@@ -44,7 +44,6 @@ html {
 }
 
 body {
-    background-color: var(--MAIN-COLOR);
     font-family: var(--MAIN-FF);
 }
 
@@ -55,13 +54,28 @@ body {
     text-align: center;
     border-radius: 1rem;
     font-family: var(--NORMAL-FF);
-
+    text-decoration: none;
     width: fit-content;
 }
 
 .btn:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
+
+}
+
+.highlight {
+    color: #b0b0b0;
+}
+
+.normal-link {
+    color: var(--PRIMARY-COLOR);
+    text-decoration: none;
+}
+
+.normal-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 
 }
 
@@ -107,14 +121,75 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    row-gap: 1.5rem;
+}
+
+.hero__right {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    width: 100%;
+
 }
 
 .hero__img {
-    width: 100vw;
-    height: 100vw;
+    width: 300px;
+    height: 300px;
     border: 2px solid;
-    background-color: papayawhip;
-    background-image: url("../img/1.jpg");
+    border-radius: 50%;
+    background-color: #e3e8e4;
+    background-image: url("../img/3.png");
     background-position: bottom;
     background-size: cover;
 }
+
+.hero__stats {
+    display: flex;;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero__stats h1 {
+    position: relative;
+}
+
+.hero__stats--review::after {
+    position: absolute;
+    content: 'Premium Product';
+    font-family: var(--NORMAL-FF);
+    font-size: 0.75rem;
+    bottom: -30px;
+    left: 0;
+    text-align: center;
+}
+
+.review-product::after {
+    content: 'Premium Product';
+}
+
+.review-customer::after {
+    content: 'Happy Customers';
+}
+
+.review-awards::after {
+    content: 'Award Winnings';
+}
+
+.hero__content {
+    margin: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+
+    text-align: justify;
+}
+
+.hero__links {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
