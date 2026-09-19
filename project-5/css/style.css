@@ -258,10 +258,143 @@ body {
 
 /* || PANEL-SCECTION-STYLING */
 /* Have to Style the panel Section and it's cards */
-.panel__img {
+
+.panel-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 3rem;
+}
+
+.panel__img-container {
+    position: relative;
+}
+
+.panel__img-layer {
     width: 350px;
     height: 350px;
     background-color: var(--BACKGROUND-COLOR);
-    background-position: bottom;
-    background-size: contain;
+    border-radius: 100%;
+}
+
+.panel__img-container img {
+    position: absolute;
+    top: -50px;
+}
+
+.panel__details {
+    padding: 1rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel__cards-container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 175px);
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 0.5rem;
+    /* column-gap: 1rem;
+    row-gap: 0.5rem; */
+}
+
+.panel__card {
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.panel__card h1 {
+    font-family: var(--NORMAL-FF);
+    font-size: 1.25rem;
+}
+
+.panel__card p {
+    color: gray;
+}
+
+.panel__card--star {
+    background-color: var(--BACKGROUND-COLOR);
+    position: relative;
+}
+
+.panel__card--star::before {
+    content: '\2605';
+    position: absolute;
+    padding: 0.25rem;
+    color: var(--BACKGROUND-COLOR);
+    background-color: var(--PRIMARY-COLOR);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    left: -0.75rem;
+    top: -0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel__img-layer--2 {
+    border-radius: 40% 40% 100% 100% ;   
+}
+
+/* || Footer - Styling */
+.footer {
+    width: 100%;
+    min-height: 55Vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.footer__details {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    row-gap: 0.5rem;
+}
+
+.footer__details p {
+    font-family: var(--NORMAL-FF);
+    font-size: 0.9rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0.25rem;
+    column-gap: 0.5rem;
+}
+
+.footer__links__card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+
+.footer__links__card h1 {
+    font-size: 1.75rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer__links__card a:any-link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.footer__links__card a:is(:hover, :focus, :active) {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
