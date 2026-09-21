@@ -26,7 +26,7 @@ img {
     --MAIN-COLOR: #e3e8e4;
     --PRIMARY-COLOR: #363636;
     --BACKGROUND-COLOR: #e3e8e4;
-    
+
 }
 
 /* || UTILITY CLASSES */
@@ -37,6 +37,11 @@ img {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.text-center {
+    text-align: center;
+    padding: 0 1rem;
 }
 
 /* GENERAL-STYLING */
@@ -78,6 +83,15 @@ body {
     text-decoration: underline;
     text-underline-offset: 5px;
 
+}
+
+.copyright {
+    color: white;
+    background-color: #333;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 /* || HEADER-STYLING */
@@ -147,7 +161,8 @@ body {
 }
 
 .hero__stats {
-    display: flex;;
+    display: flex;
+    ;
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 2rem;
@@ -257,8 +272,6 @@ body {
 }
 
 /* || PANEL-SCECTION-STYLING */
-/* Have to Style the panel Section and it's cards */
-
 .panel-section {
     margin-top: 2rem;
     display: flex;
@@ -300,8 +313,6 @@ body {
     grid-template-columns: repeat(2, 175px);
     grid-template-rows: repeat(2, 150px);
     grid-gap: 0.5rem;
-    /* column-gap: 1rem;
-    row-gap: 0.5rem; */
 }
 
 .panel__card {
@@ -342,7 +353,7 @@ body {
 }
 
 .panel__img-layer--2 {
-    border-radius: 40% 40% 100% 100% ;   
+    border-radius: 40% 40% 100% 100%;
 }
 
 /* || Footer - Styling */
@@ -397,4 +408,164 @@ body {
 .footer__links__card a:is(:hover, :focus, :active) {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+/* || MEDIA-QUERIES */
+@media screen and (min-width: 750px) {
+
+    /* HEADER-STYLING */
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__nav {
+        gap: 2rem;
+    }
+
+    /* HERO-STYLING */
+    .header_container {
+        min-width: 80vw;
+    }
+
+    .hero {
+        flex-flow: row nowrap;
+        column-gap: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        justify-content: space-evenly;
+    }
+
+    .hero__img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .hero__right {
+        order: 1;
+    }
+
+    .hero__content {
+        justify-content: center;
+    }
+
+    /* || PANEL-SCECTION-STYLING */
+    .panel-section {
+        flex-flow: row nowrap;
+        column-gap: 1rem;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .img-pos-right {
+        order: 1;
+    }
+
+    .panel__img-layer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .panel__details {
+        max-width: 55vw;
+    }
+
+    .panel__cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    /* || FOOTER-STYLING */
+    .footer {
+        margin-top: 2rem;
+        flex-flow: row nowrap;
+        column-gap: 1rem;
+    }
+
+    .footer__details {
+        max-width: 400px;
+    }
+
+    .footer__links {
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+
+    /* || HEADER STYLING */
+    .header__nav {
+        gap: 3.5rem;
+    }
+
+    /* HERO STYLING */
+    .hero__right {
+        max-width: 420px;
+    }
+
+    .hero__content {
+        max-width: 450px;
+        row-gap: 2rem;
+    }
+
+    .hero__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* PRODUCT-SECTION-STYLING */
+    .product-section {
+        padding-top: 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .product-list__container {
+        display: block;
+        width: 100%;
+    }
+
+    .product-list {
+        margin-top: 2rem;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .product__card {
+        transform: scale(0.90);
+    }
+
+    /* PANEL-SECTION- STYLING */
+    .panel__img-container {
+        padding-left: 1rem;
+    }
+
+    .panel__img-container img {
+        left: 8px;
+    }
+
+    .panel__img-layer {
+        width: 340px;
+        height: 340px;
+    }
+
+    .panel__details {
+        max-width: 616px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .product__card {
+        transform: scale(1);
+    }
 }
