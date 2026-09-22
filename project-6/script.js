@@ -119,6 +119,8 @@ const clicked = (box) => {
             winnerAnnounce.style.display = "block";
             winnerAnnounce.innerText = "There Has Been a Tie Please start New Game";
             disableAll();
+            newGameBtn.style.display = "block";
+            resetBtn.style.display = "none";
         }
     });
 }
