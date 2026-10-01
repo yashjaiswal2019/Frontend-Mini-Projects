@@ -5,7 +5,6 @@ const btn = document.querySelector("form button");
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 
-
 for (let select of dropdowns) {
     for (let currCode in countryList) {
         let newOption = document.createElement("option");
@@ -36,7 +35,7 @@ const updateFlag = (element) => {
     
 }
 
-btn.addEventListener("click", async (evt) => {
+let updatePrice = async (evt) => {
     evt.preventDefault();
     let amount = document.querySelector(".amount input");
     let amtVal =  amount.value;
@@ -55,4 +54,6 @@ btn.addEventListener("click", async (evt) => {
     exchange *= amount.value;
     let msg = document.querySelector(".msg");
     msg.innerText = `${amount.value} ${fromCurrency.toUpperCase()} = ${exchange} ${toCurrency.toUpperCase()}`
-});
+}
+
+btn.addEventListener("click", updatePrice);
